@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button"
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table"
+import { Suspense } from "react";
 
 export default function Download() {
   const searchParams = useSearchParams();
@@ -57,11 +58,11 @@ export default function Download() {
         <TableBody>
           <TableRow>
             <TableCell>Architecture</TableCell>
-            <TableCell>{arch}</TableCell>
+            <TableCell>arm64-v8a</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>IFL Version</TableCell>
-            <TableCell>{version}</TableCell>
+            <TableCell>245</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>IG Version</TableCell>
