@@ -29,7 +29,8 @@ export default function Download() {
 
 
   return (
-    <div className="flex flex-col min-h-[100dvh]">
+    <Suspense fallback={<a>Loading...</a>}>
+<div className="flex flex-col min-h-[100dvh]">
       <Header></Header>
       <main className="flex-1">
       <div className="flex flex-col md:flex-row gap-8 md:gap-16 w-full max-w-6xl mx-auto py-12 md:py-24 px-4 md:px-6">
@@ -38,7 +39,6 @@ export default function Download() {
           <h2 className="text-3xl md:text-4xl font-bold">64-bit</h2>
           <p className="text-lg md:text-xl">
           The arm64-v8a architecture is supported by Instagram on devices running Android 9 and above. This ensures that users with newer Android devices can take advantage of improved performance and efficiency.          </p>
-          <Suspense>
           <Link
                               href={{
                                 pathname: '/download_instafel',
@@ -59,7 +59,6 @@ export default function Download() {
           >
             Download Older Builds
           </Link>
-          </Suspense>
         </div>
         
       </div>
@@ -68,7 +67,6 @@ export default function Download() {
           <h2 className="text-2xl md:text-3xl font-bold">32-bit</h2>
           <p className="text-base md:text-lg">
           Instagram supports 32-bit architecture on devices running versions below Android 9. This compatibility allows users with older Android devices to access and use Instagram without any problems.          </p>
-          <Suspense>
           <Link
                   href={{
                     pathname: '/download_instafel',
@@ -89,12 +87,12 @@ export default function Download() {
           >
             Download Older Builds
           </Link> 
-          </Suspense>
         </div>
       </div>
     </div>
       </main>
       <Footer></Footer>
     </div>
+    </Suspense>
   );
 }
