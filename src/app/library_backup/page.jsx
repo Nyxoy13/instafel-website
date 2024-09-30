@@ -9,7 +9,7 @@ import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@
 import { Suspense } from "react";
 import { requestFormReset } from "react-dom";
 import {Skeleton} from "@nextui-org/skeleton";
-import { FileIcon } from "lucide-react";
+import { File, FileIcon } from "lucide-react";
 
 export default function BackupLibrary() {
   const [data, setData] = useState(null);
@@ -36,7 +36,7 @@ export default function BackupLibrary() {
     <Header />
     <main>
       { data ? ( <div className="w-full max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold mb-6">Backup Library</h1>
+      <h1 className="text-3xl font-bold mb-6 w-full text-center">Backup Library</h1>
       <div className="grid gap-4">
       {data ? data.backups.length > 0 ? (
                       data.backups.map((item, index) => (

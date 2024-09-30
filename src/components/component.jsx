@@ -3,6 +3,15 @@ import { Card, CardHeader, CardFooter } from "@/components/ui/card"
 import { Header, Footer } from "@/components/ifl"
 import "../app/globals.css"
 import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Database, Flag } from "lucide-react"
 
 export function Component() {
   return (

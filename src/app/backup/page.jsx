@@ -3,13 +3,21 @@
 import { Header, Footer, LoadingBar } from "@/components/ifl"
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button"
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table"
 import { Suspense } from "react";
 import { requestFormReset } from "react-dom";
 import {Skeleton} from "@nextui-org/skeleton";
-import { Dot, FileIcon } from "lucide-react";
+import { Dot, FileIcon, SunMediumIcon } from "lucide-react";
+
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
+import { Twitter, Linkedin, Github, Instagram } from "lucide-react"
 
 export default function Backup() {
   const searchParams = useSearchParams();
@@ -26,13 +34,34 @@ export default function Backup() {
     fetchData();
   }, []);
 
-  const viewBackup = (url) => {
-    const link = document.createElement("a");
-    link.href = '/backup?id=' + url;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
+  const handleDownload = async (id, version) => {
+    // JSON dosyasını HTTP üzerinden al
+    const response = await fetch('https://raw.githubusercontent.com/instafel/backups/refs/heads/main/' + id +'/backup.json');
+
+    if (!response.ok) {
+      console.error("Dosya alınamadı");
+      return;
+    }
+
+    // Gelen yanıtı JSON formatına çevir
+    const jsonData = await response.json();
+    const fileName = id + "_v" + version +".json"; // İndirilecek dosyanın adı
+
+    // JSON verisini Blob'a dönüştür
+    const file = new Blob([JSON.stringify(jsonData, null, 2)], { type: 'application/json' });
+
+    // Geçici bir URL oluştur
+    const url = URL.createObjectURL(file);
+
+    // İndirme işlemi için bir <a> etiketi oluştur ve tıkla
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = fileName;
+    a.click();
+
+    // Belleği temizle
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -55,7 +84,7 @@ export default function Backup() {
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <p className="text-sm font-medium">Owner</p>
-              <p className="text-sm text-muted-foreground"><u>{data.author}</u> (Click for show author info)</p>
+              <AuthorComponent authorName={data.author} showAuthorSocials={data.optional.show_author_socials} authorData={data.optional_values.author_socials}/>
             </div>
             <div>
               <p className="text-sm font-medium">Last Updated</p>
@@ -66,31 +95,11 @@ export default function Backup() {
         <div>
           <h2 className="text-lg font-semibold mb-2">Changelog</h2>
           <div className="grid gap-2">
-            <div className="flex items-start gap-2">
-              <Dot className="mt-1 h-4 w-4 text-muted-foreground" />
-              <div>
-                <p className="text-sm font-medium">Updated content</p>
-                <p className="text-sm text-muted-foreground">Added new section on backup details</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-2">
-              <Dot className="mt-1 h-4 w-4 text-muted-foreground" />
-              <div>
-                <p className="text-sm font-medium">Removed unused files</p>
-                <p className="text-sm text-muted-foreground">Cleaned up old media files and unused assets</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-2">
-              <Dot className="mt-1 h-4 w-4 text-muted-foreground" />
-              <div>
-                <p className="text-sm font-medium">Performance improvements</p>
-                <p className="text-sm text-muted-foreground">Optimized images and minified CSS/JS</p>
-              </div>
-            </div>
+          <p dangerouslySetInnerHTML={{ __html: data.changelog.replace(/\n/g, "<br />") }} />
           </div>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <Button size="lg">Download Backup</Button>
+          <Button onClick={() => handleDownload(id, data.backup_version)}size="lg">Download Backup</Button>
           <Button variant="outline" size="lg">
             Open in Instafel
           </Button>
@@ -103,21 +112,83 @@ export default function Backup() {
   );
 }
 
-function CheckIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M20 6 9 17l-5-5" />
-    </svg>
-  )
+export function useSocialMediaModal(props) {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const openModal = useCallback(() => setIsOpen(true), [])
+  const closeModal = useCallback(() => setIsOpen(false), [])
+
+  const SocialMediaUiComponent = (props) => {
+
+    console.log(props.authorData.twitter)
+    var authorData = props.authorData;
+    var links = [];
+
+    if (authorData.github != undefined) {
+      links.push(<div className="flex items-center space-x-4">
+        <Github className="h-6 w-6 text-gray-800" />
+        <a href={`https://github.com/${authorData.github}`} target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:underline">
+          {authorData.github}
+        </a>
+      </div>)
+    }
+
+    if (authorData.instagram != undefined) {
+      links.push(  <div className="flex items-center space-x-4">
+        <Instagram className="h-6 w-6 text-pink-600" />
+        <a href={`https://www.instagram.com/${authorData.instagram}`} target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:underline">
+          @{authorData.instagram}
+        </a>
+      </div>)
+    }
+
+    if(authorData.medium != undefined) {
+      links.push(  <div className="flex items-center space-x-4">
+        <SunMediumIcon className="h-6 w-6 text-pink-600" />
+        <a href={`https://www.medium.com/@${authorData.medium}`} target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:underline">
+          @{authorData.medium}
+        </a>
+      </div>)
+    }
+
+    return (
+      <div>
+        {links.map((item, index) => (
+          <div key={index}>{item}<br/></div>
+        ))}
+      </div>
+    );
+  }
+
+  const SocialMediaModal = useCallback((props) => (
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+      <DialogContent className="sm:max-w-[425px]">
+        <DialogHeader>
+          <DialogTitle>@{props.authorName}</DialogTitle>
+        </DialogHeader>
+        <div className="flex flex-col space-y-4">
+         <SocialMediaUiComponent authorData={props.authorData} />
+        </div>
+      </DialogContent>
+    </Dialog>
+  ), [isOpen])
+
+  return { SocialMediaModal, openModal, closeModal }
+}
+
+export function AuthorComponent(props) {
+  const { SocialMediaModal, openModal } = useSocialMediaModal()
+
+  if (props.showAuthorSocials) {
+    return (
+      <div>
+        <a onClick={openModal}><u>{props.authorName}</u> <u>(Click for show author info)</u></a> 
+        <SocialMediaModal authorData={props.authorData} authorName={props.authorName} />
+      </div>
+    )
+  } else {
+    return (
+      <a>{props.authorName}</a> 
+    )
+  }
 }

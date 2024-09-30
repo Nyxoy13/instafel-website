@@ -13,8 +13,8 @@ export function Header() {
           <Link href="/guide" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             Guide
           </Link>
-          <Link href="/library" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Library
+          <Link href="/library_backup" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+            BLibrary
           </Link>
           <Link href="/download?version=latest" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             Download
