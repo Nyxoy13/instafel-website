@@ -1,23 +1,16 @@
 "use client";
 
 import { Header, Footer, LoadingBar } from "@/components/ifl"
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button"
-import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table"
-import { Suspense } from "react";
-import { requestFormReset } from "react-dom";
-import {Skeleton} from "@nextui-org/skeleton";
-import { Dot, FileIcon, SunMediumIcon } from "lucide-react";
-
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-import { Twitter, Linkedin, Github, Instagram } from "lucide-react"
+import { Github, Instagram, SunMediumIcon } from "lucide-react"
 
 export default function Backup() {
   const searchParams = useSearchParams();
