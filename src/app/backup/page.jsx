@@ -175,7 +175,7 @@ export function AuthorComponent(props) {
   if (props.showAuthorSocials) {
     return (
       <div>
-        <a onClick={openModal}><u>{props.authorName}</u> <u>(Click for show author info)</u></a> 
+        <a onClick={openModal}><u>{props.authorName}</u> <u>(Click for show owner info)</u></a> 
         <SocialMediaModal authorData={props.authorData} authorName={props.authorName} />
       </div>
     )
