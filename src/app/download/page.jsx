@@ -44,7 +44,7 @@ export default function Download() {
                                 pathname: '/download_instafel',
                                 query: { 
                                   version: data,
-                                  arch: "arm32" 
+                                  arch: "arm64" 
                                 },
                               }}
             className="w-full inline-flex h-10 items-center justify-center rounded-md bg-primary-foreground px-6 text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
@@ -53,8 +53,12 @@ export default function Download() {
             Download {data ? data : <p> ...</p>}
           </Link>
           <Link
-            href="https://github.com/mamiiblt/instafel_release_arm64-v8a/tags"
-            className="w-full inline-flex h-10 items-center justify-center rounded-md bg-secondary-foreground px-6 text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  href={{
+                    pathname: '/download_archive',
+                    query: { 
+                      arch: "arm64" 
+                    },
+                  }}            className="w-full inline-flex h-10 items-center justify-center rounded-md bg-secondary-foreground px-6 text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}
           >
             Download Older Builds
@@ -75,13 +79,18 @@ export default function Download() {
                       arch: "arm32" 
                     },
                   }}
-            className="w-full inline-flex h-10 items-center justify-center rounded-md bg-muted-foreground px-6 text-sm font-medium text-muted shadow transition-colors hover:bg-muted/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            className="w-full inline-flex h-10 items-center justify-center rounded-md bg-muted-foreground px-6 text-sm font-medium text-muted shadow transition-colors hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}
           >
             Download {data ? data : <p> ...</p>}
             </Link>
             <Link
-            href="https://github.com/mamiiblt/instafel_release_armeabi-v7a/tags"
+                              href={{
+                                pathname: '/download_archive',
+                                query: { 
+                                  arch: "arm32" 
+                                },
+                              }}
             className="w-full inline-flex h-10 items-center justify-center rounded-md bg-secondary-foreground px-6 text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}
           >

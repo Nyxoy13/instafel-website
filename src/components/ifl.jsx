@@ -10,8 +10,8 @@ export function Header() {
           </b>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link href="https://mamiiblt.me/blog/instafel" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Blog
+          <Link href="/guide" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+            Guide
           </Link>
           <Link href="/library" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             Library
@@ -22,6 +22,14 @@ export function Header() {
         </nav>
       </header>
     );
+}
+
+export function LoadingBar() {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center h-full">
+      <div className="relative h-16 w-16 animate-spin rounded-full border-4 border-primary border-t-transparent" />
+    </div>    
+  );
 }
 
 export function Footer() {
