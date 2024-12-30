@@ -54,14 +54,14 @@ export default function Backup() {
             </div>
             <div className="grid gap-6">
               <div>
-                <h2 className="text-lg font-semibold mb-2">About the Backup</h2>
+                <h2 className="text-lg font-semibold mb-2">Yedekleme Hakkında</h2>
                 <p className="text-sm text-muted-foreground">{data.description}</p>
               </div>
               <div>
-                <h2 className="text-lg font-semibold mb-2">Backup Details</h2>
+                <h2 className="text-lg font-semibold mb-2">Yedekleme Ayrıntıları</h2>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <p className="text-sm font-medium">Owner</p>
+                    <p className="text-sm font-medium">Proje Sahibi</p>
                     <AuthorComponent
                       authorName={data.author}
                       showAuthorSocials={data.optional.show_author_socials}
@@ -69,25 +69,25 @@ export default function Backup() {
                     />
                   </div>
                   <div>
-                    <p className="text-sm font-medium">Last Updated</p>
+                    <p className="text-sm font-medium">Son Güncelleme</p>
                     <p className="text-sm text-muted-foreground">
-                      Updated to v{data.backup_version} on {data.last_updated}
+                      Güncellendi v{data.backup_version} Tarih {data.last_updated}
                     </p>
                   </div>
                 </div>
               </div>
               <div>
-                <h2 className="text-lg font-semibold mb-2">Changelog</h2>
+                <h2 className="text-lg font-semibold mb-2">Değişiklik Günlüğü</h2>
                 <div className="grid gap-2">
                   <p dangerouslySetInnerHTML={{ __html: data.changelog.replace(/\n/g, "<br />") }} />
                 </div>
               </div>
               <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                 <Button onClick={() => handleDownload(id, data.backup_version)} size="lg">
-                  Download Backup
+                  Yedeklemeyi İndir
                 </Button>
                 <Button variant="outline" size="lg">
-                  Open in Instafel
+                  Instaflax'da Aç
                 </Button>
               </div>
             </div>
