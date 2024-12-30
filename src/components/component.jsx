@@ -83,9 +83,9 @@ Instagram için En İyi Alpha Deneyimi
               <Card className="flex flex-col justify-between">
                 <CardHeader>
                   <div className="grid gap-1">
-                    <h3 className="text-xl font-bold">OTA Updates</h3>
+                    <h3 className="text-xl font-bold">OTA Güncellemeleri</h3>
                     <p>
-                      OTA kanalları için doğrudan kaynaktan alınan en son Alpha APK'larını anında yamaladı ve yayınladı
+OTA kanalları için doğrudan kaynaktan alınan en son Alpha APK'larını anında yamaladı ve yayınladı
                     </p>
                   </div>
                 </CardHeader>
@@ -93,8 +93,8 @@ Instagram için En İyi Alpha Deneyimi
               <Card className="flex flex-col justify-between">
                 <CardHeader>
                   <div className="grid gap-1">
-                    <h3 className="text-xl font-bold">Backup / Flag Library</h3>
-                    <p className="text-muted-foreground">You can import backups / flags directly from libraries!</p>
+                    <h3 className="text-xl font-bold">Yedekleme / Bayrak Kütüphanesi</h3>
+                    <p className="text-muted-foreground">Yedeklemeleri/Bayrakları Doğrudan Kütüphanelerden içe Aktarabilirsiniz</p>
                   </div>
                 </CardHeader>
               </Card>
