@@ -66,8 +66,7 @@ Instagram için En İyi Alpha Deneyimi
                   <div className="grid gap-1">
                     <h3 className="text-xl font-bold">Klon Desteği</h3>
                     <p className="text-muted-foreground">
-                      Orijinal Instagram yerine Alpha sürümlerini yüklemek istemiyorsanız, yükleyebilirsiniz.
-                      it as a secondary app!
+                      Orijinal Instagram Yerine Alpha Sürümlerini Yüklemek istemiyorsanız Onu ikinci Uygulama Olarak Yükleyebilirsiniz!
                     </p>
                   </div>
                 </CardHeader>
