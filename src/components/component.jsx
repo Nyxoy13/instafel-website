@@ -23,8 +23,7 @@ export function Component() {
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-Instagram için En İyi Alpha Deneyimi
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">Instagram için En iyi Alpha Deneyimi
                   </h1>
                   <p>
                     Instaflax, Güçlü Bir Yamalı Alpha Sürümlerini Olabildiğince Hızlı Bir Şekilde Yayınlamayı Hedefliyoruz.
@@ -75,7 +74,7 @@ Instagram için En İyi Alpha Deneyimi
                 <CardHeader>
                   <div className="grid gap-1">
                     <h3 className="text-xl font-bold">32 Bit Desteği</h3>
-                    <p className="text-muted-foreground">Neredeyse geçerliliğini yitirmiş 32 bit cihazlar için her zaman destek sunuyoruz!</p>
+                    <p className="text-muted-foreground">Neredeyse Geçerliliğini Yitirmiş 32 Bit Cihazlar için Her Zaman Destek Sunuyoruz!</p>
                   </div>
                 </CardHeader>
               </Card>
