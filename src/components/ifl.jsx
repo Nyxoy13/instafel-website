@@ -6,7 +6,7 @@ export function Header() {
         <Link href="/" className="flex items-center justify-center" prefetch={false}>
           <InstagramIcon className="h-6 w-6" />
           <b className="p-2">
-            Instafel
+            Instaflax
           </b>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
@@ -14,10 +14,10 @@ export function Header() {
             Guide
           </Link>
           <Link href="/library_backup" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            BLibrary
+            Kütüphane
           </Link>
           <Link href="/download?version=latest" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Download
+            indir
           </Link>
         </nav>
       </header>
@@ -37,8 +37,8 @@ export function Footer() {
     <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
       <p className="text-xs text-muted-foreground">Developed by mamiiblt with ❤️</p>
       <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-        <Link href="https://t.me/instafel" className="text-xs hover:underline underline-offset-4" prefetch={false}>
-          Telegram Channel
+        <Link href="https://t.me/instaflax" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+          Telegram Kanalı
         </Link>
         <Link href="https://github.com/mamiiblt" className="text-xs hover:underline underline-offset-4" prefetch={false}>
           GitHub
