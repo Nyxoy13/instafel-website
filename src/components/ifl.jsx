@@ -43,7 +43,7 @@ export function Footer() {
         </Link>
         <Link
  href="https://github.com/mamiiblt" className="text-xs hover:underline underline-offset-4" prefetch={false}
-<div class="icons8-github"></div>
+<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/github.png" alt="github"/>
 >
           GitHub
         </Link>
