@@ -28,7 +28,7 @@ const fontLogo = Barlow({
 
 export default function Layout({ children }) {
   return (
-    <html lang="en">
+    <html lang="tr">
       <body 
         className={cn(
           'antialiased',
