@@ -36,7 +36,7 @@ export default function BackupLibrary() {
     <Header />
     <main>
       { data ? ( <div className="w-full max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold mb-6 w-full text-center">Backup Library</h1>
+      <h1 className="text-3xl font-bold mb-6 w-full text-center">Yedekleme Kitaplığı</h1>
       <div className="grid gap-4">
       {data ? data.backups.length > 0 ? (
                       data.backups.map((item, index) => (
@@ -45,10 +45,10 @@ export default function BackupLibrary() {
     <FileIcon className="w-8 h-8 text-primary" />
     <div className="flex-1">
       <h3 className="text-lg font-medium">{item.name}</h3>
-      <p className="text-muted-foreground">Created by {item.author}</p>
+      <p className="text-muted-foreground">Tarafından Oluşturuldu {item.author}</p>
     </div>
     <Button onClick={() => viewBackup(item.id)} variant="outline" size="sm">
-      View
+      Gör
     </Button>
   </div>
 </div>
