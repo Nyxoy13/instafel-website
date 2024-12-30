@@ -39,13 +39,12 @@ export function Footer() {
       <p className="text-xs text-muted-foreground">ModderByTR Tarafından Geliştirildi ❤️</p>
       <nav className="sm:ml-auto flex gap-4 sm:gap-6">
         <Link href="https://t.me/instaflax" className="text-xs hover:underline underline-offset-4" prefetch={false}>
-          Telegram Kanalı
+      
         </Link>
         <Link
  href="https://github.com/mamiiblt" className="text-xs hover:underline underline-offset-4" prefetch={false}
-<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/github.png" alt="github"/>
 >
-          GitHub
+        
         </Link>
       </nav>
     </footer>
