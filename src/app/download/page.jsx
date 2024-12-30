@@ -50,7 +50,7 @@ export default function Download() {
             className="w-full inline-flex h-10 items-center justify-center rounded-md bg-primary-foreground px-6 text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}
           >
-            Download {data ? data : <p> ...</p>}
+            İnsdir {data ? data : <p> ...</p>}
           </Link>
           <Link
                   href={{
@@ -61,7 +61,7 @@ export default function Download() {
                   }}            className="w-full inline-flex h-10 items-center justify-center rounded-md bg-secondary-foreground px-6 text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}
           >
-            Download Older Builds
+            Eski Yapıları İndirin
           </Link>
         </div>
         
@@ -82,7 +82,7 @@ export default function Download() {
             className="w-full inline-flex h-10 items-center justify-center rounded-md bg-muted-foreground px-6 text-sm font-medium text-muted shadow transition-colors hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}
           >
-            Download {data ? data : <p> ...</p>}
+            İndir {data ? data : <p> ...</p>}
             </Link>
             <Link
                               href={{
