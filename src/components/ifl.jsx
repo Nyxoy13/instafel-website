@@ -24,7 +24,6 @@ export function Header() {
       </header>
     );
 }
-
 export function LoadingBar() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center h-full">
@@ -32,7 +31,6 @@ export function LoadingBar() {
     </div>    
   );
 }
-
 export function Footer() {
   return (
     <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
