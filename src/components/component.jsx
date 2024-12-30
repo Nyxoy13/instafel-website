@@ -24,7 +24,7 @@ export function Component() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    The Best Alpha Experience for Instagram
+                    Instagram için En İyi Alpha Deneyimi
                   </h1>
                   <p>
                     Instafel aims to release alpha versions with a powerful patcher as quickly as possible.
@@ -36,7 +36,7 @@ export function Component() {
                     className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 w-full"
                     prefetch={false}
                   >
-                    Download Now
+                    Şimdi İndir
                   </Link>
                 </div>
               </div>
@@ -54,9 +54,9 @@ export function Component() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Instafel Features</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Instaflax Özellikleri</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Our Instagram mod offers a range of powerful features to enhance your Instafel Alpha experience.
+                  Instagram modumuz, Instaflax Alpha deneyiminizi geliştirmek için bir dizi güçlü özellik sunar.
                 </p>
               </div>
             </div>
@@ -64,9 +64,9 @@ export function Component() {
               <Card className="flex flex-col justify-between">
                 <CardHeader>
                   <div className="grid gap-1">
-                    <h3 className="text-xl font-bold">Clone Support</h3>
+                    <h3 className="text-xl font-bold">Klon Desteği</h3>
                     <p className="text-muted-foreground">
-                      If you don't want to install the Alpha versions instead of the original Instagram, you can install
+                      Orijinal Instagram yerine Alpha sürümlerini yüklemek istemiyorsanız, yükleyebilirsiniz.
                       it as a secondary app!
                     </p>
                   </div>
@@ -75,8 +75,8 @@ export function Component() {
               <Card className="flex flex-col justify-between">
                 <CardHeader>
                   <div className="grid gap-1">
-                    <h3 className="text-xl font-bold">32-bit Support</h3>
-                    <p className="text-muted-foreground">We always offer support for nearly obsolete 32-bit devices!</p>
+                    <h3 className="text-xl font-bold">32 Bit Desteği</h3>
+                    <p className="text-muted-foreground">Neredeyse geçerliliğini yitirmiş 32 bit cihazlar için her zaman destek sunuyoruz!</p>
                   </div>
                 </CardHeader>
               </Card>
@@ -85,8 +85,7 @@ export function Component() {
                   <div className="grid gap-1">
                     <h3 className="text-xl font-bold">OTA Updates</h3>
                     <p>
-                      Instantly patched and released the latest Alpha APKs pulled directly from the source for OTA
-                      channels.
+                      OTA kanalları için doğrudan kaynaktan alınan en son Alpha APK'larını anında yamaladı ve yayınladı
                     </p>
                   </div>
                 </CardHeader>
@@ -102,10 +101,9 @@ export function Component() {
               <Card className="flex flex-col justify-between">
                 <CardHeader>
                   <div className="grid gap-1">
-                    <h3 className="text-xl font-bold">Crash Reports</h3>
+                    <h3 className="text-xl font-bold">ınstaflax Yakında Sizlerle</h3>
                     <p className="text-muted-foreground">
-                      It is very common for the application to crash when using Alpha versions, Instafel always keeps a
-                      crash report for such cases.
+                     ınstaflax bı çok özellik eklenecektir beklemede kalın.
                     </p>
                   </div>
                 </CardHeader>
@@ -117,9 +115,10 @@ export function Component() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Telegram Group</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Telegram Kanalı</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Sssh... We always ready to help for you!
+                  Size
+elimizden geldiğince yardım edeceğiz her zaman yardıma hazırız! ❤️
                 </p>
               </div>
             </div>
@@ -129,18 +128,17 @@ export function Component() {
                   <div className="grid gap-1">
                     <h3 className="text-xl font-bold">Telegram Group</h3>
                     <p className="text-muted-foreground">
-                      Join our Telegram group to stay up-to-date with the latest Instafel updates and news. Share your
-                      feedback, suggestions and everything with the community.
+                      En son Instaflax Güncellemeleri Ve Haberlerinden haberdar olmak için Telegram grubumuza katılın.
                     </p>
                   </div>
                 </CardHeader>
                 <CardFooter>
                   <Link
-                    href="https://t.me/instafel"
+                    href="https://t.me/instaflax"
                     className="w-full inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                     prefetch={false}
                   >
-                    Join Instafel Telegram Group
+                    Instaflax Telegram Grubuna Katılın.
                   </Link>
                 </CardFooter>
               </Card>
