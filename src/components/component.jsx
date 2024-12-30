@@ -101,7 +101,7 @@ OTA kanalları için doğrudan kaynaktan alınan en son Alpha APK'larını anın
                   <div className="grid gap-1">
                     <h3 className="text-xl font-bold">Instaflax Yakında Sizlerle</h3>
                     <p className="text-muted-foreground">
-                     Instaflax Bi Çok Özellik Eklenecektir Beklemede Kalın.
+Instaflax Bi Çok Özellik Eklenecektir Beklemede Kalın.
                     </p>
                   </div>
                 </CardHeader>
