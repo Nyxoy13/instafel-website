@@ -24,10 +24,10 @@ export function Component() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    Instagram için En İyi Alpha Deneyimi
+Instagram için En İyi Alpha Deneyimi
                   </h1>
                   <p>
-                    Instafel aims to release alpha versions with a powerful patcher as quickly as possible.
+                    Instaflax, Güçlü Bir Yamalı Alpha Sürümlerini Olabildiğince Hızlı Bir Şekilde Yayınlamayı Hedefliyoruz.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -101,9 +101,9 @@ export function Component() {
               <Card className="flex flex-col justify-between">
                 <CardHeader>
                   <div className="grid gap-1">
-                    <h3 className="text-xl font-bold">ınstaflax Yakında Sizlerle</h3>
+                    <h3 className="text-xl font-bold">Instaflax Yakında Sizlerle</h3>
                     <p className="text-muted-foreground">
-                     ınstaflax bı çok özellik eklenecektir beklemede kalın.
+                     Instaflax Bi Çok Özellik Eklenecektir Beklemede Kalın.
                     </p>
                   </div>
                 </CardHeader>
@@ -126,7 +126,7 @@ elimizden geldiğince yardım edeceğiz her zaman yardıma hazırız! ❤️
               <Card className="flex flex-col justify-between">
                 <CardHeader>
                   <div className="grid gap-1">
-                    <h3 className="text-xl font-bold">Telegram Group</h3>
+                    <h3 className="text-xl font-bold">Telegram Grubu</h3>
                     <p className="text-muted-foreground">
                       En son Instaflax Güncellemeleri Ve Haberlerinden haberdar olmak için Telegram grubumuza katılın.
                     </p>
@@ -138,7 +138,7 @@ elimizden geldiğince yardım edeceğiz her zaman yardıma hazırız! ❤️
                     className="w-full inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                     prefetch={false}
                   >
-                    Instaflax Telegram Grubuna Katılın.
+Instaflax Telegram Grubuna Katılın.
                   </Link>
                 </CardFooter>
               </Card>
