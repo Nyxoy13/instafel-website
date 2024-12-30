@@ -38,7 +38,7 @@ export default function Download() {
         <div className="space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold">64-bit</h2>
           <p className="text-lg md:text-xl">
-          The arm64-v8a architecture is supported by Instagram on devices running Android 9 and above. This ensures that users with newer Android devices can take advantage of improved performance and efficiency.          </p>
+          arm64-v8a mimarisi, Android 9 ve üzerini çalıştıran cihazlarda Instagram tarafından desteklenir. Bu, daha yeni Android cihazlara sahip kullanıcıların gelişmiş performans ve verimlilikten yararlanabilmesini sağlar.          </p>
           <Link
                               href={{
                                 pathname: '/download_instafel',
@@ -70,7 +70,7 @@ export default function Download() {
         <div className="space-y-4">
           <h2 className="text-2xl md:text-3xl font-bold">32-bit</h2>
           <p className="text-base md:text-lg">
-          Instagram supports 32-bit architecture on devices running versions below Android 9. This compatibility allows users with older Android devices to access and use Instagram without any problems.          </p>
+          Instagram, Android 9'un altındaki sürümleri çalıştıran cihazlarda 32 bit mimariyi destekler. Bu uyumluluk, eski Android cihazlara sahip kullanıcıların Instagram'a sorunsuz bir şekilde erişmesine ve kullanmasına olanak tanır.          </p>
           <Link
                   href={{
                     pathname: '/download_instafel',
@@ -94,7 +94,7 @@ export default function Download() {
             className="w-full inline-flex h-10 items-center justify-center rounded-md bg-secondary-foreground px-6 text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}
           >
-            Download Older Builds
+            Eski Yapıları İndirin
           </Link> 
         </div>
       </div>
