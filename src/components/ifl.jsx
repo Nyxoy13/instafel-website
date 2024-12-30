@@ -41,7 +41,10 @@ export function Footer() {
         <Link href="https://t.me/instaflax" className="text-xs hover:underline underline-offset-4" prefetch={false}>
           Telegram Kanalı
         </Link>
-        <Link href="https://github.com/mamiiblt" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+        <Link
+ href="https://github.com/mamiiblt" className="text-xs hover:underline underline-offset-4" prefetch={false}
+<div class="icons8-github"></div>
+>
           GitHub
         </Link>
       </nav>
