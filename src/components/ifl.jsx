@@ -16,8 +16,8 @@ export function Header() {
           <Link href="/library_backup" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             Kütüphane
           </Link>
-          <Link href="/download?version=latest" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false
-<img width="6" height="4" src="https://img.icons8.com/material-rounded/24/download--v1.png" alt="download--v1"/>}>
+          <Link href="/download?version=latest" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}
+>
             indir
           </Link>
         </nav>
