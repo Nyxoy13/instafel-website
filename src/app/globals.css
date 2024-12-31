@@ -4,11 +4,11 @@
 
 @layer base {
   :root {
-    --background: #000000;
+    --background-color: #000000;
     --foreground: #000000;
-    --primary: 90 45% 70%;
+    --primary-color: #007bff;
     --primary-foreground: 90 45% 11%;
-    --secondary: 90 35% 77%;
+    --secondary-color: #FF0000;
     --secondary-foreground: 90 45% 25%;
     --accent: 90 64% 57%;
     --accent-foreground: 36 72% 17%;
