@@ -137,18 +137,18 @@ export default function Download() {
     <div className="flex flex-col items-start space-y-6">
       <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">Download the v{data ? data.app.ifl_version : "..."} of Instafel</h1>
       <p className="text-muted-foreground text-lg leading-relaxed">
-        Get the release version of Instafel for both clone and unclone variants.
+        Hem klonlama hem de klon Olamayan Çeşitleri için Instaflax'ın Alpha Sürümünü Edinin.
       </p>
       <div className="flex flex-col sm:flex-row gap-4">
-        <Button onClick={() => download(data ? data.download_urls.unclone : null)} size="lg">Download Unclone</Button>
-        <Button onClick={() => download(data ? data.download_urls.clone : null)} size="lg" variant="secondary">Download Clone</Button>
+        <Button onClick={() => download(data ? data.download_urls.unclone : null)} size="lg">indir klon olmayan</Button>
+        <Button onClick={() => download(data ? data.download_urls.clone : null)} size="lg" variant="secondary">indir klon</Button>
       </div>
     </div>
     <div className="flex flex-col items-start space-y-6">
-      <h2 className="text-2xl sm:text-3xl font-bold">Changelog</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold">Değişiklik Günlüğü</h2>
       <div className="space-y-4">
         <div className="flex flex-col gap-2">
-          <div className="font-medium">Added in {version}</div>
+          <div className="font-medium">Eklendi {version}</div>
           <ul className="space-y-2 text-muted-foreground">
           {data ? (
                       data.changelogs.map((item, index) => (
@@ -166,19 +166,19 @@ export default function Download() {
     </div>
   </div>
   <div className="mt-12 sm:mt-16 lg:mt-24">
-    <h2 className="text-2xl sm:text-3xl font-bold mb-6">Build Information</h2>
+    <h2 className="text-2xl sm:text-3xl font-bold mb-6">Yapı Bilgileri</h2>
     <Table>
       <TableBody>
         <TableRow>
-          <TableCell>Architecture</TableCell>
+          <TableCell>Mimarisi</TableCell>
           <TableCell>{data ? data.app.arch : "..."}</TableCell>
         </TableRow>
         <TableRow>
-          <TableCell>Build Date</TableCell>
+          <TableCell>Yapım Tarihi</TableCell>
           <TableCell>{data ? new Date(parseInt(data.build_date)).toLocaleString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }).replace(',', '') : "..."}</TableCell>
         </TableRow>
         <TableRow>
-          <TableCell>IG Version</TableCell>
+          <TableCell>IG Sürümü</TableCell>
           <TableCell>{data ? data.app.version_name : "..."}</TableCell>
         </TableRow>
         <TableRow>
@@ -186,15 +186,11 @@ export default function Download() {
           <TableCell>{data ? data.app.version_code : "..."}</TableCell>
         </TableRow>
         <TableRow>
-          <TableCell>IFL Version</TableCell>
+          <TableCell>Iflax Sürümü</TableCell>
           <TableCell>{data ? data.app.ifl_version : "..."}</TableCell>
         </TableRow>
         <TableRow>
-          <TableCell>IFL FU Version</TableCell>
-          <TableCell>{data ? "1.4" : "..."}</TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>Generation ID</TableCell>
+          <TableCell>Oluşturma ID</TableCell>
           <TableCell>{data ? data.gen_id: "..."}</TableCell>
         </TableRow>
         <TableRow>
