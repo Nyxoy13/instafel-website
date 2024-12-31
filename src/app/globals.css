@@ -5,9 +5,9 @@
 @layer base {
   :root {
   --primary-color: #007bff; /* Blue */
-  --secondary-color: #6c757d; /* Gray */
+  --secondary-color: #FF0000; /* Gray */
   --background-color: #000000; /* Light Gray */
-  --text-color: #212529; /* Dark Gray */
+  --text-color: #FCFDFF; /* Dark Gray */
   --font-family: 'Roboto', sans-serif;
 }
 }
