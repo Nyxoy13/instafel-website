@@ -6,7 +6,7 @@
   :root {
   --primary-color: #007bff; /* Blue */
   --secondary-color: #6c757d; /* Gray */
-  --background-color: #f8f9fa; /* Light Gray */
+  --background-color: #000000; /* Light Gray */
   --text-color: #212529; /* Dark Gray */
   --font-family: 'Roboto', sans-serif;
 }
