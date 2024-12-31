@@ -4,10 +4,12 @@
 
 @layer base {
   :root {
-    --primary-color: #007bff; /* Blue */
-  --secondary-color: #FF0000; /* Gray */
-  --background-color: #000000; /* Light Gray */
-  --text-color: #FCFDFF; /* Dark Gray */ 25%;
+    --background: 90 39% 88%;
+    --foreground: 90 45% 15%;
+    --primary: 90 45% 70%;
+    --primary-foreground: 90 45% 11%;
+    --secondary: 90 35% 77%;
+    --secondary-foreground: 90 45% 25%;
     --accent: 90 64% 57%;
     --accent-foreground: 36 72% 17%;
     --destructive: 0 84% 37%;
@@ -23,12 +25,6 @@
     --ring: 90 45% 30%;
     --radius: 0rem;
   }
-}
-body {
-  margin: 0;
-  font-family: var(--font-family);
-  background-color: var(--background-color);
-  color: var(--text-color);
 }
 
 @layer base {
