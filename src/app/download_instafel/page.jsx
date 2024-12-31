@@ -135,7 +135,7 @@ export default function Download() {
       { data ? (<div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
     <div className="flex flex-col items-start space-y-6">
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">Download the v{data ? data.app.ifl_version : "..."} of Instafel</h1>
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">indir v{data ? data.app.ifl_version : "..."} Instaflax</h1>
       <p className="text-muted-foreground text-lg leading-relaxed">
         Hem klonlama hem de klon Olamayan Çeşitleri için Instaflax'ın Alpha Sürümünü Edinin.
       </p>
